@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .soft-red {
+      background-color: hsl(5, 85%, 63%);
+    }
+
+    .red-clr {
+      color: hsl(5, 85%, 63%);
+    }
+
+    .soft-orange {
+      color: hsl(35, 77%, 62%);
+    }
+  </style>
+
+
+  <title>News homepage</title>
+
+  <style>
+    .attribution {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="max-w-6xl mx-auto p-4 mt-4">
+    <!-- Navbar -->
+    <div class="flex flex-wrap items-center justify-between  ">
+
+      <a href="#" class="flex items-center justify-center">
+        <img src="/assets/images/logo.svg" alt="">
+      </a>
+
+      <!-- Hidden Checkbox -->
+      <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+      <!-- Label as button -->
+      <label for="menu-toggle" class="flex items-center justify-center rounded-lg md:hidden cursor-pointer">
+        <img src="/assets/images/icon-menu.svg" alt="">
+      </label>
+
+      <!-- Menu Items -->
+      <div class="hidden w-full md:block md:w-auto peer-checked:block" id="navbar-default">
+        <ul
+          class="flex flex-col p-4 mt-4 md:flex-row border border-gray-100 rounded-lg bg-gray-50
+         md:space-x-6 font-light md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li><a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ">Home</a>
+          </li>
+          <li><a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ">New</a>
+          </li>
+          <li><a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ">Popular</a>
+          </li>
+          <li><a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ">Trending</a>
+          </li>
+          <li><a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ">Categories</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Division using Grid -->
+    <section class="grid grid-cols-3 gap-6 my-8">
+
+      <!-- section-1 -->
+      <div class="col-span-3 md:col-span-2 mt-6 md:mt-0">
+
+        <div class="hidden md:block">
+          <img src="/assets/images/image-web-3-desktop.jpg" alt="">
+        </div>
+
+        <div class="md:hidden mb-3">
+          <img src="/assets/images/image-web-3-mobile.jpg" class="w-full" alt="">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 ">
+          <h1 class="col-span-2 text-7xl md:col-span-1 my-4 md:text-6xl md:w-full md:w-5/6 font-bold md:py-6 ">
+            The Bright Future of Web 3.0?
+          </h1>
+
+          <div class="col-span-2 md:col-span-1">
+            <p class="font-light text-2xl tracking-wider mb-10 w-full md:mt-1 md:text-lg md:mb-8 md:pt-5">
+              We dive into the next evolution of the web that claims to put the power
+              of the platforms back into the hands of the people. But is it really fulfilling its promise?
+            </p>
+
+            <button class="soft-red uppercase font-bold text-2xl py-5 px-16 mb-10 md:py-2 md:px-10 ">
+              Read More
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- section-2 -->
+      <div class="bg-black col-span-3 md:col-span-1 p-6  md:p-4 md:mb-6 flex flex-col ">
+        <h2 class="soft-orange my-4 text-5xl  md:text-3xl font-bold md:my-3">New</h2>
+
+        <div class="text-white my-8 ">
+          <h3 class="text-3xl tracking-wider md:text-lg font-bold mb-2">Hydrogen VS Electric Cars</h3>
+          <p class="text-xl  mt-4 md:text-sm font-light tracking-widest">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+
+          <div class="border-b border-inherit mt-8"></div>
+        </div>
+
+        <div class="text-white ">
+          <h3 class="text-3xl tracking-wider md:text-lg font-bold mb-2">The Downsides of AI Artistry</h3>
+          <p class="text-xl tracking-wider mt-4 md:text-sm font-light tracking-widest">
+            What are the possible adverse effects of on-demand AI image generation?
+          </p>
+
+          <div class="border-b border-inherit mt-8"></div>
+        </div>
+
+        <div class="text-white my-8 ">
+          <h3 class="text-3xl tracking-wider md:text-lg font-bold mb-2">Is VC Funding Drying Up?</h3>
+          <p class="text-xl mt-4 md:text-sm font-light tracking-widest">
+            Private funding by VC firms is down 50% YOY. We take a look at what that means.
+          </p>
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- COL -->
+    <section class="flex flex-col md:flex-row gap-6">
+      <div class="flex-1 flex gap-4 items-center">
+        <img src="/assets/images/image-retro-pcs.jpg" alt="" class="object-cover w-32 h-32 md:w-28 md:h-auto">
+        <div class="flex flex-col gap-2 p-4 text-left">
+          <h2 class="red-clr text-4xl font-bold">01</h2>
+          <h3 class="text-base font-extrabold mt-2">Reviving Retro PCs</h3>
+          <p class="text-sm font-light mt-1 tracking-wide">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>
+
+      <div class="flex-1 flex gap-4 items-center">
+        <img src="/assets/images/image-top-laptops.jpg" alt="" class="object-cover w-32 h-32 md:w-28 md:h-auto">
+        <div class="flex flex-col gap-2 p-4 text-left">
+          <h2 class="red-clr text-4xl font-bold">02</h2>
+          <h3 class="text-base font-extrabold mt-2">Top 10 Laptops of 2022</h3>
+          <p class="text-sm font-light mt-1 tracking-wide">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex-1 flex gap-4 items-center">
+        <img src="/assets/images/image-gaming-growth.jpg" alt="" class="object-cover w-32 h-32 md:w-28 md:h-auto">
+        <div class="flex flex-col gap-2 p-4 text-left">
+          <h2 class="red-clr text-4xl font-bold">03</h2>
+          <h3 class="text-base font-extrabold mt-2">The Growth of Gaming</h3>
+          <p class="text-sm font-light mt-1 tracking-wide">
+            How the pandemic has sparked fresh opportunities
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+
+  <div class="attribution bg-black text-white py-3 mt-3">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="font-bold">Frontend Mentor</a>.
+    Coded by <a href="#" class="font-bold">Roqais Mahmood</a>.
+  </div>
+</body>
+
+</html>
